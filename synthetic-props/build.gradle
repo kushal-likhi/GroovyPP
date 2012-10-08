@@ -1,0 +1,128 @@
+import org.gradle.api.artifacts.maven.MavenDeployment
+
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+group = 'org.devunited'
+version = '1.0.1'
+ext.packaging = 'jar'
+
+//TWEAK HERE
+def isDevBuild = false
+def isReleaseBuild = true
+//TWEAK ENDS
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.6'
+}
+
+
+
+task buildClassesFromGroovy(overwrite: true, dependsOn: compileGroovy) {
+
+    doFirst {
+        println "[INFO] : Build Utility - by Kushal"
+    }
+
+}
+
+task mainJar(type: Jar, dependsOn: buildClassesFromGroovy) {
+    doFirst {
+        println "[INFO] : Building JAR"
+    }
+    from sourceSets.main.output
+    from(file("org.codehaus.groovy.transform.ASTTransformation")) {
+        into "META-INF/services"
+    }
+}
+
+task groovydocJar(type: Jar, dependsOn: groovydoc) {
+    classifier = 'javadoc'
+    from 'build/docs/groovydoc'
+}
+
+task sourcesJar(type: Jar, dependsOn: mainJar) {
+    from sourceSets.main.output
+    classifier = 'sources'
+}
+
+artifacts {
+    archives jar
+    archives groovydocJar
+    archives sourcesJar
+}
+
+task buildAll(dependsOn: [sourcesJar, groovydocJar]) {
+    doFirst {
+        println "[INFO] : Executing the process"
+    }
+    doLast {
+        println 'Execution Complete!'
+    }
+}
+
+
+//********* artifact signing *********
+if (isReleaseBuild) {
+    signing {
+        sign configurations.archives
+    }
+} else {
+    task signArchives {
+        // do nothing
+    }
+}
+
+uploadArchives {
+    repositories {
+        if (isDevBuild) {
+            mavenLocal()
+        } else {
+            mavenDeployer {
+                if (isReleaseBuild) {
+                    beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+                }
+
+                repository(url: sonatypeRepositoryUrl) {
+                    authentication(userName: sonatypeUsername, password: sonatypePassword)
+                }
+
+                pom.project {
+                    name 'Synthetic Bindings'
+                    packaging 'jar'
+                    description 'Enriches groovy classes to provide you with Synthetic bindings.'
+                    url 'https://github.com/kushal-likhi/GroovyPP'
+
+                    scm {
+                        url 'scm:git@github.com:kushal-likhi/GroovyPP.git'
+                        connection 'scm:git@github.com:kushal-likhi/GroovyPP.git'
+                        developerConnection 'scm:git@github.com:kushal-likhi/GroovyPP.git'
+                    }
+
+                    licenses {
+                        license {
+                            name 'The Apache Software License, Version 2.0'
+                            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                            distribution 'repo'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id 'kushal.likhi'
+                            name 'Kushal Likhi'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
