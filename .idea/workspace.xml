@@ -2,19 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55430c02-e3de-462b-a4f1-9bf4009e647c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GroovyPP.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/synthetic-props/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/synthetic-props/syntheticPropertiesAutoComplete.gdsl" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/synthetic-props/build/libs/synthetic-props-1.0.1-javadoc.jar.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/synthetic-props/build/libs/synthetic-props-1.0.1-sources.jar.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/synthetic-props/build/libs/synthetic-props-1.0.1.jar.asc" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/synthetic-props/.gradle/1.0/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/poms/pom-default.xml.asc" afterPath="$PROJECT_DIR$/synthetic-props/build/poms/pom-default.xml.asc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroovyPP.iml" afterPath="$PROJECT_DIR$/GroovyPP.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build.gradle" afterPath="$PROJECT_DIR$/synthetic-props/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/deprecated-list.html" afterPath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/help-doc.html" afterPath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/index-all.html" afterPath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/index-all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.html" afterPath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/org/devunited/groovypp/global/package-summary.html" afterPath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/org/devunited/groovypp/global/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/overview-frame.html" afterPath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/overview-summary.html" afterPath="$PROJECT_DIR$/synthetic-props/build/docs/groovydoc/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/ivy.xml" afterPath="$PROJECT_DIR$/synthetic-props/build/ivy.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/poms/pom-default.xml" afterPath="$PROJECT_DIR$/synthetic-props/build/poms/pom-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/build/tmp/groovydoc/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy" afterPath="$PROJECT_DIR$/synthetic-props/build/tmp/groovydoc/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/org.codehaus.groovy.transform.ASTTransformation" afterPath="$PROJECT_DIR$/synthetic-props/org.codehaus.groovy.transform.ASTTransformation" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/synthetic-props/src/main/groovy/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy" afterPath="$PROJECT_DIR$/synthetic-props/src/main/groovy/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy" />
     </list>
     <ignored path="GroovyPP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,19 +84,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/synthetic-props/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="108" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.46524063">
+            <state line="7" column="16" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../screenshot/build.gradle">
+      <file leaf-file-name="SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/synthetic-props/src/main/groovy/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="57" selection-start="460" selection-end="466" vertical-scroll-proportion="0.0">
+            <state line="127" column="19" selection-start="4774" selection-end="4774" vertical-scroll-proportion="3.4762774">
+              <folding>
+                <element signature="e#39#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AstBuilder.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///opt/groovy-1.8.5/lib/groovy-1.8.5.jar!/org/codehaus/groovy/ast/builder/AstBuilder.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="74" selection-start="1879" selection-end="1879" vertical-scroll-proportion="-15.6">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="syntheticPropertiesAutoComplete.gdsl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/synthetic-props/syntheticPropertiesAutoComplete.gdsl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="69" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,6 +138,9 @@
         <option value="$PROJECT_DIR$/synthetic-props/META-INF/services/org.codehaus.groovy.transform.ASTTransformation" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/synthetic-props/src/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy" />
+        <option value="$PROJECT_DIR$/synthetic-props/org.codehaus.groovy.transform.ASTTransformation" />
+        <option value="$PROJECT_DIR$/synthetic-props/syntheticPropertiesAutoComplete.gdsl" />
+        <option value="$PROJECT_DIR$/synthetic-props/src/main/groovy/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy" />
         <option value="$PROJECT_DIR$/synthetic-props/build.gradle" />
       </list>
     </option>
@@ -336,11 +371,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="18" width="1384" height="732" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="18" width="1384" height="732" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -354,7 +389,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924012" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -475,22 +510,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../screenshot/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="57" selection-start="460" selection-end="466" vertical-scroll-proportion="0.0">
+        <state line="8" column="32" selection-start="201" selection-end="201" vertical-scroll-proportion="-0.4973262">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/synthetic-props/org.codehaus.groovy.transform.ASTTransformation">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="80" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/groovy-1.8.5/lib/groovy-1.8.5.jar!/org/codehaus/groovy/control/CompilePhase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="170" selection-end="170" vertical-scroll-proportion="0.11472275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/groovy-1.8.5/lib/groovy-1.8.5.jar!/org/codehaus/groovy/ast/InnerClassNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="64" selection-start="212" selection-end="212" vertical-scroll-proportion="0.11472275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synthetic-props/syntheticPropertiesAutoComplete.gdsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="69" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/groovy-1.8.5/lib/groovy-1.8.5.jar!/org/codehaus/groovy/ast/ClassNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="19" selection-start="10579" selection-end="10579" vertical-scroll-proportion="0.34799236">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/groovy-1.8.5/lib/groovy-1.8.5.jar!/org/codehaus/groovy/ast/builder/AstBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="74" selection-start="1879" selection-end="1879" vertical-scroll-proportion="-15.6">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/synthetic-props/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="108" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.46524063">
+        <state line="7" column="16" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synthetic-props/src/main/groovy/org/devunited/groovypp/global/SyntheticPropertiesAndSyntheticMethodsASTTransform.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="19" selection-start="4774" selection-end="4774" vertical-scroll-proportion="3.4762774">
+          <folding>
+            <element signature="e#39#88#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -15,6 +15,7 @@ class SyntheticPropertiesAndSyntheticMethodsASTTransform implements ASTTransform
 
     AstBuilder astBuilder = new AstBuilder()
 
+    private int PUBLIC_STATIC = PropertyNode.ACC_PUBLIC | PropertyNode.ACC_STATIC
 
     void visit(ASTNode[] astNodes, SourceUnit sourceUnit) {
 
@@ -22,26 +23,35 @@ class SyntheticPropertiesAndSyntheticMethodsASTTransform implements ASTTransform
             throw new RuntimeException("Internal error: expecting [ModuleNode] but got: ${astNodes as List}")
         }
 
-        if (!((sourceUnit.name =~ /grails-app/) || (sourceUnit.name =~ /src.groovy/))) {
+        if (!(
+        (sourceUnit.name =~ /grails-app/) ||
+                (sourceUnit.name =~ /src.groovy/) ||
+                (sourceUnit.name =~ /src/) ||
+                (sourceUnit.name =~ /griffon-app/)
+        )) {
             return
         }
 
         astNodes[0].getClasses().each { ClassNode targetClass ->
 
+            enrichClass(targetClass)
+
+        }
+
+    }
+
+    private void enrichClass(ClassNode targetClass) {
+        if (targetClass.isInterface() || targetClass.isAnnotationDefinition() || targetClass.implementsInterface(new ClassNode(ASTTransformation.class))) {
+            return
+        }
+
+        if (!targetClass.hasProperty("syntheticProperties")) {
             List<String> propsDeclared = []
             targetClass.properties.each {property ->
                 if (property.getLineNumber() > 1) {
                     propsDeclared.add(property.name)
                 }
             }
-
-            List<String> methodsDeclared = []
-            targetClass.methods.each {method ->
-                if (method.getLineNumber() > 1) {
-                    methodsDeclared.add(method.name)
-                }
-            }
-
             String propsMap = "  "
             propsDeclared.each {
                 propsMap += "${it}: ${it},"
@@ -49,7 +59,7 @@ class SyntheticPropertiesAndSyntheticMethodsASTTransform implements ASTTransform
             propsMap = propsMap.substring(0, propsMap.length() - 1)
             targetClass.addProperty(
                     new PropertyNode(
-                            "declaredProperties",
+                            "syntheticProperties",
                             PropertyNode.ACC_PUBLIC,
                             new ClassNode(Map),
                             targetClass,
@@ -60,26 +70,83 @@ class SyntheticPropertiesAndSyntheticMethodsASTTransform implements ASTTransform
                             null
                     )
             )
+        }
 
-            String methodsList = "  "
-            methodsDeclared.each {
-                methodsList += "'${it}',"
+        if (!targetClass.hasProperty("syntheticPropertyNames")) {
+            List<String> propsDeclared = []
+            targetClass.properties.each {property ->
+                if (property.getLineNumber() > 1) {
+                    propsDeclared.add(property.name)
+                }
             }
-            methodsList = methodsList.substring(0, methodsList.length() - 1)
+            String propsMap = "  "
+            propsDeclared.each {
+                propsMap += "'${it}',"
+            }
+            propsMap = propsMap.substring(0, propsMap.length() - 1)
             targetClass.addProperty(
                     new PropertyNode(
-                            "declaredMethods",
-                            PropertyNode.ACC_PUBLIC,
+                            "syntheticPropertyNames",
+                            PUBLIC_STATIC,
                             new ClassNode(List),
                             targetClass,
                             null,
                             astBuilder.buildFromString("""
+                            [${propsMap}]
+                            """).first() as BlockStatement,
+                            null
+                    )
+            )
+        }
+
+        if (!targetClass.hasProperty("syntheticMethods")) {
+            List<String> methodsDeclared = []
+            targetClass.methods.each {method ->
+                if (method.getLineNumber() > 1) {
+                    methodsDeclared.add(method.name)
+                }
+            }
+            String methodsList = methodsDeclared ? ("\"\"\"" + methodsDeclared.join("\"\"\", \"\"\"") + "\"\"\"").replaceAll(/\$/, /\\\$/) : ""
+            targetClass.addProperty(
+                    new PropertyNode(
+                            "syntheticMethods",
+                            PropertyNode.ACC_PUBLIC,
+                            new ClassNode(List),
+                            targetClass,
+                            null,
+                            astBuilder.buildFromString(CompilePhase.CONVERSION, """
                             [${methodsList}]
                             """).first() as BlockStatement,
                             null
                     )
             )
+        }
 
+        if (!targetClass.hasProperty("syntheticMethodNames")) {
+            List<String> methodsDeclared = []
+            targetClass.methods.each {method ->
+                if (method.getLineNumber() > 1) {
+                    methodsDeclared.add(method.name)
+                }
+            }
+            String methodsList = methodsDeclared ? ("\"\"\"" + methodsDeclared.join("\"\"\", \"\"\"") + "\"\"\"").replaceAll(/\$/, /\\\$/) : ""
+            targetClass.addProperty(
+                    new PropertyNode(
+                            "syntheticMethodNames",
+                            PUBLIC_STATIC,
+                            new ClassNode(List),
+                            targetClass,
+                            null,
+                            astBuilder.buildFromString(CompilePhase.CONVERSION, """
+                            [${methodsList}]
+                            """).first() as BlockStatement,
+                            null
+                    )
+            )
+        }
+
+        targetClass.innerClasses.each {InnerClassNode innerClassNode ->
+            enrichClass(innerClassNode)
         }
 
     }

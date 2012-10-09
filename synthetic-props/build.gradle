@@ -5,7 +5,7 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 group = 'org.devunited'
-version = '1.0.1'
+version = '1.0.9'
 ext.packaging = 'jar'
 
 //TWEAK HERE
@@ -41,6 +41,9 @@ task mainJar(type: Jar, dependsOn: buildClassesFromGroovy) {
     from sourceSets.main.output
     from(file("org.codehaus.groovy.transform.ASTTransformation")) {
         into "META-INF/services"
+    }
+    from(file("syntheticPropertiesAutoComplete.gdsl")) {
+        into "org/devunited/gdsl"
     }
 }
 
@@ -96,9 +99,9 @@ uploadArchives {
                 }
 
                 pom.project {
-                    name 'Synthetic Bindings'
+                    name 'Synthetic Properties and Methods'
                     packaging 'jar'
-                    description 'Enriches groovy classes to provide you with Synthetic bindings.'
+                    description 'Enriches groovy classes to provide you with Synthetic properties and methods.'
                     url 'https://github.com/kushal-likhi/GroovyPP'
 
                     scm {

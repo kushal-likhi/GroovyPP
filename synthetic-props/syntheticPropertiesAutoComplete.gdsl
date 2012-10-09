@@ -1,0 +1,10 @@
+package org.devunited.gdsl
+
+def ctx = context(ctype:'java.lang.Object')
+
+contributor(ctx){
+     property name: 'syntheticMethods', type: 'java.util.List'
+     property name: 'syntheticPropertyNames', type: 'java.util.List'
+     property name: 'syntheticMethodNames', type: 'java.util.List'
+     property name: 'syntheticProperties', type: 'java.util.Map'
+}

@@ -2,9 +2,9 @@
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
 	<info organisation="org.devunited"
 		module="synthetic-props"
-		revision="1.0.1"
+		revision="1.0.9"
 		status="integration"
-		publication="20121009005908"
+		publication="20121009190033"
 	/>
 	<configurations>
 		<conf name="archives" visibility="public" description="Configuration for archive artifacts."/>

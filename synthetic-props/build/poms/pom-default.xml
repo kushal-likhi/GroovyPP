@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.devunited</groupId>
   <artifactId>synthetic-props</artifactId>
-  <version>1.0.1</version>
-  <name>Synthetic Bindings</name>
-  <description>Enriches groovy classes to provide you with Synthetic bindings.</description>
+  <version>1.0.9</version>
+  <name>Synthetic Properties and Methods</name>
+  <description>Enriches groovy classes to provide you with Synthetic properties and methods.</description>
   <url>https://github.com/kushal-likhi/GroovyPP</url>
   <licenses>
     <license>
